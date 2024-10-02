@@ -35,7 +35,7 @@ public class Ejercicio7 {
             System.out.println("La cuota para una persona adulta es " + cuotaBase + "€");
 
         }
-
+        scanner.close();
 
 
 
