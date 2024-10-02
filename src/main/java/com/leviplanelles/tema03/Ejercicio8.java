@@ -10,7 +10,7 @@ public class Ejercicio8 {
         //String texto = "La cara opuesta del resultado de tu dado es el ";
         System.out.println("Has tirado un dado, que número has sacado? (1-6)");
         dado = Integer.parseInt(scanner.nextLine());
-
+        scanner.close();
         if (dado > 0 && dado < 7) {
             caraOpuesta = switch (dado) {
                 case 1 -> 6;
