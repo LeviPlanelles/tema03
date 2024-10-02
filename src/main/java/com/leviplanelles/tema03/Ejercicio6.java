@@ -8,7 +8,7 @@ public class Ejercicio6 {
         float dineroInput;
 
         System.out.println("Dime una cantidad de dinero y te digo la cantidad mínima de monedas para representar la cantidad de monedas indicada:");
-        dineroInput = Integer.parseInt(scanner.nextLine());
+        dineroInput = Float.parseFloat(scanner.nextLine());
 
         int dinero = (int)(dineroInput * 100);
 
@@ -34,9 +34,8 @@ public class Ejercicio6 {
         resto = resto % 2;
 
         int monedas1 = resto;
-
-        System.out.println("Para representar " + dineroInput + " con las menores monedas posibles sería:" +
-                moneda200 + " de 2€, " + monedas100 + "de 1€, " + monedas50 + " de 50 cenitmos, " + monedas20 + " de 20 centimos, " + monedas10 + " de 10 centimos, " + monedas5 + " de 5 centimos, " + monedas2 + " de 2 centimos y " + monedas1 + " de 1 centimo.");
+        scanner.close();
+        System.out.println("Para representar " + dineroInput + " con las menores monedas posibles sería:" + moneda200 + " de 2€, " + monedas100 + "de 1€, " + monedas50 + " de 50 cenitmos, " + monedas20 + " de 20 centimos, " + monedas10 + " de 10 centimos, " + monedas5 + " de 5 centimos, " + monedas2 + " de 2 centimos y " + monedas1 + " de 1 centimo.");
         
 
 
