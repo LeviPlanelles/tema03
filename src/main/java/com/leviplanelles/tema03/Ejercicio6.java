@@ -35,7 +35,7 @@ public class Ejercicio6 {
 
         int monedas1 = resto;
         scanner.close();
-        System.out.println("Para representar " + dineroInput + " con las menores monedas posibles sería: " + moneda200 + " de 2€, " + monedas100 + "de 1€, " + monedas50 + " de 50 cenitmos, " + monedas20 + " de 20 centimos, " + monedas10 + " de 10 centimos, " + monedas5 + " de 5 centimos, " + monedas2 + " de 2 centimos y " + monedas1 + " de 1 centimo.");
+        System.out.println("Para representar " + dineroInput + " con las menores monedas posibles sería: " + moneda200 + " de 2€, " + monedas100 + " de 1€, " + monedas50 + " de 50 cenitmos, " + monedas20 + " de 20 centimos, " + monedas10 + " de 10 centimos, " + monedas5 + " de 5 centimos, " + monedas2 + " de 2 centimos y " + monedas1 + " de 1 centimo.");
         
 
 
