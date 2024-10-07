@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class Ejercicio3 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        int num1;
-        int num2;
-        int resultado = 0;
+        int num1,num2,resultado;
+        resultado = 0;
         System.out.println("Dime un número: ");
         num1 = Integer.parseInt(leer.nextLine());
 
