@@ -1,6 +1,5 @@
 package com.leviplanelles.tema03.bucles;
 
-import java.util.Scanner;
 
 public class Ejercicio5 {
     public static void main(String[] args) {
@@ -11,22 +10,21 @@ public class Ejercicio5 {
         int sumaMultiplos = 0;
 
         for (int i = 1; i <= 100; i++) {
-            if (i % 2 == 0) {
+            if (i % 2 == 0 && i % 5 == 0) {
+                System.out.println("El número " + i + " Es par y ademas multiplo de 5.");
+                contador++;
+                sumaMultiplos += i;
+            } else if (i % 2 == 0) {
                 System.out.println("El número " + i + " Es par.");
                 sumaPar += i;
-                if (i % 5 == 0) {
-                    contador++;
-                    sumaMultiplos += i;
+            } else if (i % 5 == 0){
+                contador++;
+                sumaMultiplos += i;
+                System.out.println("El número " + i + " Es impar y ademas multiplo de 5.");
 
-                }
-            } else {
+            }else {
                 System.out.println("El número " + i + " Es impar.");
                 sumaImpar += i;
-                if (i % 5 == 0) {
-                    contador++;
-                    sumaMultiplos += i;
-
-                }
             }
 
         }
