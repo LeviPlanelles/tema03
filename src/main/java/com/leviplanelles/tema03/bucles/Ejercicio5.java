@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicio5 {
     public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
+
         int sumaPar = 0;
         int sumaImpar = 0;
         int contador = 0;
