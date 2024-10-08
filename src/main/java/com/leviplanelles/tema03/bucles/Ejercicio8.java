@@ -7,9 +7,13 @@ public class Ejercicio8 {
         Scanner leer = new Scanner(System.in);
         int num;
         int resultadoFactorial = 1;
-        System.out.print("Dime un numero y te hago su factorial: ");
-        num = Integer.parseInt(leer.nextLine());
+        do {
+            System.out.print("Dime un numero y te hago su factorial: ");
+            num = Integer.parseInt(leer.nextLine());
+        }while (num == 0);
+
         leer.close();
+
         for (int i = num; i > 0; i--) {
             resultadoFactorial *= i;
         }
