@@ -10,7 +10,7 @@ public class Ejercicio9 {
 
         System.out.print("Dime un número entero: ");
         num = Integer.parseInt(leer.nextLine());
-
+        leer.close();
         //Bucle que va dividiendo num con i (iterador) para ver si su resto es cero, si lo es, suma el contador
         for (int i = 1; i <= num; i++) {
             if (num % i == 0) {

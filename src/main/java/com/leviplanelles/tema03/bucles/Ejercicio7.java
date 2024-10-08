@@ -14,7 +14,7 @@ public class Ejercicio7 {
 
         System.out.print("Dime una potencia para el número anterior: ");
         potencia = Integer.parseInt(leer.nextLine());
-
+        leer.close();
         for (int i = 1; i <= potencia; i++) {
             resultado *= numReal;
         }

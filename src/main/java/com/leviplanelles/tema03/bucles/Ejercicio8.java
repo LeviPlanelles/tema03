@@ -9,7 +9,7 @@ public class Ejercicio8 {
         int resultadoFactorial = 1;
         System.out.print("Dime un numero y te hago su factorial: ");
         num = Integer.parseInt(leer.nextLine());
-
+        leer.close();
         for (int i = num; i > 0; i--) {
             resultadoFactorial *= i;
         }
