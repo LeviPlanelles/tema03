@@ -10,7 +10,7 @@ public class Ejercicio12 {
         Random random = new Random();
         int intentos, guess;
         int numRandom = random.nextInt(1,101);
-        System.out.println(numRandom);
+        //System.out.println(numRandom);
 
         System.out.println("****************");
         System.out.println("GUESS THE NUMBER");
@@ -27,12 +27,16 @@ public class Ejercicio12 {
 
 
         for (int i = 1; i <= intentos;) {
-            System.out.print("Adivina el numerito mágico: ");
-            guess = Integer.parseInt(leer.nextLine());
+            do {
+                System.out.println("Adivina el numerito mágico: ");
+                guess = Integer.parseInt(leer.nextLine());
+                if (guess < 0)
+                    System.err.println("El numero tiene que ser POSITIVO, intentalo otra vez");
+            }while (guess < 0);
             if (guess != numRandom) {
-                System.err.println("Número incorrecto, intentalo otra vez");
+                System.out.println("TE QUEDAN " + intentos + " INTENTOS.");
                 intentos--;
-                System.out.println("Te quedan " + intentos + " intentos.\n");
+                System.err.println("Número incorrecto, intentalo otra vez\n");
                 if (guess < numRandom) {
                     System.out.println("TIP: El número mágico es más grande que " + guess + "\n");
                 }else {
@@ -48,6 +52,7 @@ public class Ejercicio12 {
         }
         if (intentos == 0) {
             System.out.println("Se te han acabado los intentos, has perdido!");
+            System.out.println("El numerito mágico era: " + numRandom);
 
         }
 
