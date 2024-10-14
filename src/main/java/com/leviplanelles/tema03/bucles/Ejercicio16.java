@@ -74,19 +74,14 @@ public class Ejercicio16 {
                 porrasOrdenador++;
                 System.out.println("La puntuación del ordenador es " + puntuacionOrdenador + ", es mayor que tú puntuación: " + puntuacion);
                 System.out.println("El ordenador gana 1 porra y tiene " + porrasOrdenador);
-            }else if (puntuacionOrdenador < puntuacion && puntuacionOrdenador < 11) {
-                porras++;
-                System.out.println("Tu puntuación " + puntuacion + " es correcta y el ordenador se ha pasado: " + puntuacionOrdenador);
-                System.out.println("Ganas 1 porra, tienes " + porras + " porras");
-
             }
 
         }while (porrasOrdenador < 5);
 
         if (porras >= 5) {
-            System.out.println("¡Has ganado!");
+            System.out.println("¡¡HAS GANADO!!");
         } else if (puntuacionOrdenador > 4) {
-            System.out.println("Ha ganado el ordenador");
+            System.out.println("HA GANADO EL ORDENADOR");
         }
 
 
