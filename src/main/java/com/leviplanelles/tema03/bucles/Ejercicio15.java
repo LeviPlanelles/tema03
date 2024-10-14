@@ -19,6 +19,7 @@ public class Ejercicio15 {
             }
 
         }while (h < 0 || h > 24 || m < 0 || m > 59 || s < 0 || s > 59);
+        leer.close();
         System.out.println("Hora introducida: " + h + ":" + m + ":" + s);
     }
 }
