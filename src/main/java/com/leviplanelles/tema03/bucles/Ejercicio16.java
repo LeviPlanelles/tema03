@@ -13,13 +13,19 @@ public class Ejercicio16 {
         int tirada,tiradaOrdenador;
         int puntuacion = 0;
         int puntuacionOrdenador = 0;
+        int ronda = 0;
         System.out.println("**************");
         System.out.println("JUEGO DEL DADO");
         System.out.println("**************");
 
-        while (porras < 5 || porrasOrdenador < 5) {
+        do {
+            ronda++;
+            puntuacion = 0;
+            puntuacionOrdenador = 0;
+            System.out.println("Porras jugador: " + porras);
+            System.out.println("Porras ordenador: " + porrasOrdenador);
             do {
-                System.out.println("¿Estas listo? (s/n)");
+                System.out.println("¿Estas listo para la ronda num " + ronda + "? (s/n)");
                 respuesta = scanner.nextLine();
 
             }while (respuesta.equals("n"));
@@ -40,37 +46,48 @@ public class Ejercicio16 {
             if (puntuacion == 11) {
                 porras += 2;
                 System.out.println("Has conseguido la puntuación exacta para ganar, ganas dos porras");
-                System.out.println("Actualmente tienes: " + porras + "porras");
+                System.out.println("Actualmente tienes: " + porras + " porras");
                 continue;
-            } else if (puntuacion > 12) {
+            } else if (puntuacion > 11) {
                 porrasOrdenador++;
                 System.out.println("Ohh, te has pasado, el ordenador gana 1 porra");
-                System.out.println("El ordenador tiene " + porrasOrdenador + "porras");
+                System.out.println("El ordenador tiene " + porrasOrdenador + " porras");
                 continue;
             }else {
-                System.out.println("Has obtenido una puntuación de " + puntuacion + "por lo que no te has pasado.");
+                System.out.println("Has obtenido una puntuación de " + puntuacion + " por lo que no te has pasado.");
             }
             System.out.println("TURNO DEL ORDENADOR");
 
-            while (puntuacionOrdenador <= 11) {
-                System.out.println("Lanzando dados...");
+            do {
                 tiradaOrdenador = random.nextInt(1,7);
-                System.out.println("El ordenador ha sacado un: " + tiradaOrdenador);
-                puntuacionOrdenador += tiradaOrdenador;
-                System.out.println("Su puntuación es de: " + puntuacionOrdenador);
-            }
-            System.out.println("Las tiradas del ordenador suman " + puntuacionOrdenador);
-            if (puntuacionOrdenador >= puntuacion) {
+                if (puntuacionOrdenador + tiradaOrdenador > 11) {
+                    break;
+                }else {
+                    puntuacionOrdenador += tiradaOrdenador;
+                }
+
+            }while (puntuacionOrdenador <= 11);
+
+            System.out.println("El ordenador ha tirado y sus tiradas suman " + puntuacionOrdenador);
+
+            if (puntuacionOrdenador >= puntuacion && puntuacionOrdenador <= 11) {
                 porrasOrdenador++;
                 System.out.println("La puntuación del ordenador es " + puntuacionOrdenador + ", es mayor que tú puntuación: " + puntuacion);
-                System.out.println("El ordenador gana una porra");
-            }else {
+                System.out.println("El ordenador gana 1 porra y tiene " + porrasOrdenador);
+            }else if (puntuacionOrdenador < puntuacion && puntuacionOrdenador < 11) {
                 porras++;
-                System.out.println("Tu puntuación: " + puntuacion + " es mayor que la del ordenador: " + puntuacionOrdenador);
+                System.out.println("Tu puntuación " + puntuacion + " es correcta y el ordenador se ha pasado: " + puntuacionOrdenador);
+                System.out.println("Ganas 1 porra, tienes " + porras + " porras");
+
             }
+
+        }while (porrasOrdenador < 5);
+
+        if (porras >= 5) {
+            System.out.println("¡Has ganado!");
+        } else if (puntuacionOrdenador > 4) {
+            System.out.println("Ha ganado el ordenador");
         }
-        String ganador = porrasOrdenador > 4 ? "Ha ganado el ordenador" : "Ha ganado el jugador";
-        System.out.println(ganador);
 
 
     }
