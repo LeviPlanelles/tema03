@@ -6,11 +6,7 @@ public class Ejercicio5 {
         int color = 29;
         for (int i = 1; i <= 9; i++) {
             cadena += i;
-            if (color >= 37) {
-                color = 30;
-            }else {
-                color++;
-            }
+            color = color >= 37 ? 30 : ++color;
             System.out.printf("\u001B[0;"+color+"m"+"%9s\n"+"\u001B[0m",cadena);
         }
     }
