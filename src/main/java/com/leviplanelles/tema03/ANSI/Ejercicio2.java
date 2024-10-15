@@ -4,10 +4,6 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
-        double q;
-        q = 1.0/2.0;
-        System.out.printf ("1.0/2.0 = %02.3f %n", q);
-
         Scanner leer = new Scanner(System.in);
         int h,m,s;
 
