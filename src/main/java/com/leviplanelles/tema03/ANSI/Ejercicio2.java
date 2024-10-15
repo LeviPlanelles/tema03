@@ -8,11 +8,11 @@ public class Ejercicio2 {
         int h,m,s;
 
         do {
-            System.out.println("Dime una hora: (0-24h)");
+            System.out.println("Dime una hora: (0-23h)");
             h = Integer.parseInt(leer.nextLine());
-            System.out.println("Dime los minutos : (0-60min)");
+            System.out.println("Dime los minutos : (0-59min)");
             m = Integer.parseInt(leer.nextLine());
-            System.out.println("Dime los segundos: (0-60s)");
+            System.out.println("Dime los segundos: (0-59s)");
             s = Integer.parseInt(leer.nextLine());
             if (h < 0 || h > 24 || m < 0 || m > 59 || s < 0 || s > 59) {
                 System.err.println("Has puesto algún número mal, vuelve a intentarlo");
