@@ -25,10 +25,6 @@ public class Ejercicio9 {
         final String LLUVIA;
         final String UVI;
 
-
-
-
-
         //PEDIR CIUDAD
         System.out.print("Dime la ciudad en la que vives: ");
         ciudad = scanner.nextLine();
