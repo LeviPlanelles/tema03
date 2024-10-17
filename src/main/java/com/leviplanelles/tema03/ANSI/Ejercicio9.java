@@ -106,7 +106,7 @@ public class Ejercicio9 {
 
 
         //PEDIR TEMPERATURA
-        System.out.print("Indique la temperatura actual (Cº): ");
+        System.out.print("Indique la temperatura actual (ºC): ");
         temperatura = Float.parseFloat(scanner.nextLine());
 
         //PEDIR PRESION ATMOSFÉRICA
@@ -187,7 +187,7 @@ public class Ejercicio9 {
         System.out.printf("%-24s%02d/%02d/%4d\n",FECHA,dia,mes,anio);
         System.out.printf("%-24s%02d:%02d:%02d\n",HORA,h,m,s);
         System.out.printf("%-24s"+ colorVelocidad +"%d"+RESET+" km/h\n",VIENTO,velocidad);
-        System.out.printf("%-24s"+colorTemperatura+"%.2f"+RESET+" Cº\n",TEMPERATURA,temperatura);
+        System.out.printf("%-24s"+colorTemperatura+"%.2f"+RESET+" ºC\n",TEMPERATURA,temperatura);
         System.out.printf("%-24s%.1f hPa\n",PRESION,presion);
         System.out.printf("%-24s"+colorProbabilidad+"%d "+RESET,LLUVIA,probabilidad);
         System.out.println("%");
