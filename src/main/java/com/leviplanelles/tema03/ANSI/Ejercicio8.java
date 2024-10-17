@@ -17,9 +17,7 @@ public class Ejercicio8 {
                 System.out.printf(ESC + intensidad + ";" + color + ";" + bg + "m %d;%d;%d "+RESET,intensidad,color,bg);
                 bg = bg == 47 ? 40 : ++bg;
             }
-            if (j >= 8) {
-                intensidad = 1;
-            }
+            intensidad = j >= 8 ? intensidad = 1 : intensidad;
             System.out.println();
 
         }
