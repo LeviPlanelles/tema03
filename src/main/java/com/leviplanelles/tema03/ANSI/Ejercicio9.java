@@ -95,8 +95,15 @@ public class Ejercicio9 {
         }while (!check);
 
         //PEDIR LA VELOCIDAD DEL VIENTO
-        System.out.print("Indique la velocidad del viento (km/h): ");
-        velocidad = Integer.parseInt(scanner.nextLine());
+        do {
+            System.out.print("Indique la velocidad del viento (km/h): ");
+            velocidad = Integer.parseInt(scanner.nextLine());
+            check = velocidad >= 0;
+            if (!check) {
+                System.out.println("La velocidad no puede ser menor a 0");
+            }
+        }while (!check);
+
 
         //PEDIR TEMPERATURA
         System.out.print("Indique la temperatura actual (Cº): ");
